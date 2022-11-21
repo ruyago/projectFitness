@@ -3,17 +3,18 @@ const { Schema, model } = require("mongoose");
 // TODO: Please make sure you edit the user model to whatever makes sense in this case
 const userSchema = new Schema(
   {
-    username: {
-      type: String,
+    days: {
+      type: Number,
       trim: true,
       unique: true,
-      required: [true, "Name is required."],
+      required: [true, "Please add how many days per week you are going to train."],
     },
-    password: {
-      type: String,
-      minlength: 4,
-      required: [true, "Password is required."],
-    },
+    goal: {
+        type: String,
+        required: true,
+      },
+    
+    
 
   },
   {
