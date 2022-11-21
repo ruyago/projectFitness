@@ -1,0 +1,11 @@
+<div class="container">
+    <h2>training</h2>
+    <p>{{training.name}}</p>
+    <p>{{training.occupation}}</p>
+    <p>{{training.catchPhrase}}</p>
+    <a href="/trainings/{{training._id}}/edit">Edit {{training.name}}</a>
+    <form action="/trainings/{{training._id}}/delete" method="POST">
+        <button type="submit">Delete {{training.name}}</button>
+    </form>
+    <a href="/trainings">Back to trainings</a>
+</div>
