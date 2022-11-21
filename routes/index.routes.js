@@ -1,9 +1,12 @@
 const express = require('express');
+const User = require('../models/User.model');
 const router = express.Router();
 
 /* GET home page */
 router.get("/", (req, res, next) => {
-  res.render("index");
+  console.log("hit")
+  User.find().then((users)=> 
+  console.log(users)).then(()=>   res.render("index")
+  )
 });
-
 module.exports = router;
