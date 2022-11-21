@@ -7,7 +7,7 @@ router.get("/training/create", (req, res) => {
 })
 
 router.post("/trainings/create", (req, res) => {
-    const { name, occupation, catchPhrase } = req.body
+    const { name, surname, occupation, catchPhrase } = req.body
 
     training.create({
         name,
