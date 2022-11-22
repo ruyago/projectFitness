@@ -80,6 +80,7 @@ router.post("/signup", isLoggedOut, (req, res) => {
     });
 });
 
+
 // GET /auth/login
 router.get("/login", isLoggedOut, (req, res) => {
   res.render("auth/login");

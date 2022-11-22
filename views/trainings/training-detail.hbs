@@ -1,13 +1,12 @@
 <div class="container">
     <h2>Training</h2>
-    <p>{{training.goal}}</p>
-    <p>{{training.days}}</p>
-    <p>{{training.level}}</p>
-    <p>{{training.description}}</p>
-    <p>{{training.other}}</p>
-    <button><a href="/trainings/{{training._id}}/edit">Edit {{training.goal}}</a></button>
+    <p>{{training.exercise}}</p>
+    <p>{{training.date}}</p>
+    <p>{{training.sets}}</p>
+    <p>{{training.reps}}</p>
+    <button><a href="/trainings/{{training._id}}/edit">Edit {{training.exercise}}</a></button>
     <form action="/trainings/{{training._id}}/delete" method="POST">
-        <button type="submit">Delete {{training.goal}}</button>
+        <button type="submit">Delete {{training.exercise}}</button>
     </form>
     <button><a href="/trainings">Back to trainings</a></button>
 </div>
