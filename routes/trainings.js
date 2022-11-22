@@ -8,7 +8,7 @@ router.get("/trainings/create", (req, res) => {
 
 router.post("/trainings/create", (req, res) => {
     const { days, goal, level, description, other } = req.body
-
+    console.log(req.body)
     training.create({
         days,
         goal,
@@ -36,6 +36,8 @@ router.get("/trainings", (req, res) => {
         console.log(err)
     })
 })
+
+
 
 // Get training details
 router.get("/trainings/:id", (req, res) => {

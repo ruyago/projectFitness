@@ -1,21 +1,50 @@
-<div class="container">
-    <h2>Add your training</h2>
-    <form action="/trainings/create" method="POST">
-        <label for="days">Days: </label>
+<div class="container" id="appender">
+    <h2>Add your exercises</h2>
+    {{!-- <form action="/trainings/create" class="exercises" method="POST"> --}}
+        
+
+<div id="test">
+    <div id="second">
+        <form action="/trainings/create" id="exercises" method="POST">
+
+        <label for="days">Date: </label>
         <input type="date" name="days" id="days">
+        
+            <label for="goal">Goal: </label>
+            <input type="text" name="goal" id="goal">
 
-        <label for="goal">Goal: </label>
-        <input type="text" name="goal" id="goal">
+            <label for="level">Level: </label>
+            <input type="text" name="level" id="level">
 
-        <label for="level">Level: </label>
-        <input type="text" name="level" id="level">
+            <label for="description">Description: </label>
+            <input type="text" name="description" id="description">
 
-         <label for="description">Description: </label>
-        <input type="text" name="description" id="description">
+            
+    <button type="submit">Add my training</button>
+        </form>
 
-        <label for="other">other: </label>
-        <input type="checkbox" name="other" id="other">
 
-        <button type="submit">Add my training</button>
-    </form>
+ 
+        </div>
+   </div>
+   <button type="button" onclick="repeat()" id="addButton">+</button>   
+        <br>
+       
+       
 </div>
+
+ <script>
+
+
+// let button = document.getElementById("buttonex").addEventListener("onclick", console.log("clicked"))
+
+const original = document.getElementById("second")
+const toAppend = document.getElementById("test")
+
+function repeat() {
+    const clone = original.cloneNode(true)
+    toAppend.appendChild(clone)   
+        }
+
+
+</script>
