@@ -1,7 +1,8 @@
-<div class="container">
+<div id="appender" class="container">
     <h2>Add your training</h2>
 
-
+<div id="test">
+    <div id="second">
 
     <form action="/trainings/create" id="exercises" method="POST">
 
@@ -19,19 +20,26 @@
         <input type="number" name="reps" id="reps"></br>
 
 
-    <button type="submit" id="buttonex">Add exercise</button>
-    
 
-    <button type="submit">Add my training</button>
-    </form>
+<button type="submit">Add my training</button>
+        </form>
+        </div>
+   </div>
+   <button type="button" onclick="repeat()" id="addButton">+</button>
+        <br>
 
 
-    <li></li>
 
 </div>
+<script>
 
-    <script>
-addEventListener(“click”, button);
-let exercises = document.getElementById(“exercises”)
-let button = document.getElementById(“buttonex”).addEventListener(“click”, console.log(“clicked”))
- </script>
+const original = document.getElementById("second")
+const toAppend = document.getElementById("test")
+
+
+function repeat() {
+    const clone = original.cloneNode(true)
+    toAppend.appendChild(clone)
+        }
+
+</script>
