@@ -4,9 +4,7 @@ const { Schema, model } = require("mongoose");
 const trainingSchema = new Schema(
   {
     days: {
-      type: Number,
-      trim: true,
-      unique: true,
+      type: Date,
       required: [true, "Please add how many days per week you are going to train."],
     },
     goal: {
@@ -17,6 +15,11 @@ const trainingSchema = new Schema(
         type: String,
         required: true,
       },
+
+    description: {
+        type: String,
+        required: true,
+      },  
       
 
   },
