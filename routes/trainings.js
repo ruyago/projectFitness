@@ -7,6 +7,7 @@ router.get("/trainings/create", (req, res) => {
 })
 
 router.post("/trainings/create", (req, res) => {
+    const userID = req.session.currentUser._id
     const { date, exercise, sets, reps } = req.body
 
     training.create({
@@ -14,8 +15,7 @@ router.post("/trainings/create", (req, res) => {
         exercise,
         sets,
         reps,
-       
-        
+        user: userID,
     })
     .then(createdtraining => {
         console.log("training created")
