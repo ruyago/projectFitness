@@ -7,14 +7,14 @@ router.get("/trainings/create", (req, res) => {
 })
 
 router.post("/trainings/create", (req, res) => {
-    const { days, goal, level, description, other } = req.body
+    const { date, exercise, sets, reps } = req.body
 
     training.create({
-        days,
-        goal,
-        level,
-        description,
-        other
+        date,
+        exercise,
+        sets,
+        reps,
+       
         
     })
     .then(createdtraining => {
@@ -78,13 +78,13 @@ router.get("/trainings/:id/edit", (req, res) => {
 
 router.post("/trainings/:id/edit", (req, res) => {
     const id = req.params.id
-    const { days, goal, level, description } = req.body
+    const { date, exercise, sets, reps } = req.body
 
     const training = {
-        days,
-        goal,
-        level,
-        description
+        date,
+        exercise,
+        sets,
+        reps
     }
 
     training.findByIdAndUpdate(id, training)
