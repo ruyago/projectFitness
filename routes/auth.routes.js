@@ -22,13 +22,13 @@ router.get("/signup", isLoggedOut, (req, res) => {
 
 // POST /auth/signup
 router.post("/signup", isLoggedOut, (req, res) => {
-  const { username, email, password } = req.body;
+  const { username, password } = req.body;
 
-  // Check that username, email, and password are provided
-  if (username === "" || email === "" || password === "") {
+  // Check that username and password are provided
+  if (username === "" || password === "") {
     res.status(400).render("auth/signup", {
       errorMessage:
-        "All fields are mandatory. Please provide your username, email and password.",
+        "All fields are mandatory. Please provide your username, and password.",
     });
 
     return;
@@ -42,18 +42,6 @@ router.post("/signup", isLoggedOut, (req, res) => {
     return;
   }
 
-  //   ! This regular expression checks password for special characters and minimum length
-  /*
-  const regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
-  if (!regex.test(password)) {
-    res
-      .status(400)
-      .render("auth/signup", {
-        errorMessage: "Password needs to have at least 6 chars and must contain at least one number, one lowercase and one uppercase letter."
-    });
-    return;
-  }
-  */
 
   // Create a new user - start by hashing the password
   bcrypt
@@ -61,7 +49,7 @@ router.post("/signup", isLoggedOut, (req, res) => {
     .then((salt) => bcrypt.hash(password, salt))
     .then((hashedPassword) => {
       // Create a user and save it in the database
-      return User.create({ username, email, password: hashedPassword });
+      return User.create({ username, password: hashedPassword });
     })
     .then((user) => {
       res.redirect("/auth/login");
@@ -72,7 +60,7 @@ router.post("/signup", isLoggedOut, (req, res) => {
       } else if (error.code === 11000) {
         res.status(500).render("auth/signup", {
           errorMessage:
-            "Username and email need to be unique. Provide a valid username or email.",
+            "Username need to be unique. Provide a valid username.",
         });
       } else {
         next(error);
@@ -88,13 +76,13 @@ router.get("/login", isLoggedOut, (req, res) => {
 
 // POST /auth/login
 router.post("/login", isLoggedOut, (req, res, next) => {
-  const { username, email, password } = req.body;
+  const { username, password } = req.body;
 
-  // Check that username, email, and password are provided
-  if (username === "" || email === "" || password === "") {
+  // Check that username,  and password are provided
+  if (username === "" || password === "") {
     res.status(400).render("auth/login", {
       errorMessage:
-        "All fields are mandatory. Please provide username, email and password.",
+        "All fields are mandatory. Please provide username,  and password.",
     });
 
     return;
@@ -108,8 +96,8 @@ router.post("/login", isLoggedOut, (req, res, next) => {
     });
   }
 
-  // Search the database for a user with the email submitted in the form
-  User.findOne({ email })
+  // Search the database for a user with the submitted in the form
+  User.findOne({ username })
     .then((user) => {
       // If the user isn't found, send an error message that user provided wrong credentials
       if (!user) {
