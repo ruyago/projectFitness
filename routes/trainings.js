@@ -2,23 +2,27 @@ const router = require("express").Router()
 const training = require("../models/training.model")
 
 // Create training
-router.get("/training/create", (req, res) => {
+router.get("/trainings/create", (req, res) => {
     res.render("trainings/new-training")
 })
 
 router.post("/trainings/create", (req, res) => {
-    const { name, surname, occupation, catchPhrase } = req.body
+    const { days, goal, level, description, other } = req.body
 
     training.create({
-        name,
-        occupation,
-        catchPhrase
+        days,
+        goal,
+        level,
+        description,
+        other
+        
     })
     .then(createdtraining => {
+        console.log("training created")
         res.redirect("/trainings")
     })
     .catch(err => {
-        res.render("trainings/new-training")
+        res.render("trainings/new-training", { errorMessage: "Wrong credentials." })
     })
 })
 
@@ -39,7 +43,7 @@ router.get("/trainings/:id", (req, res) => {
 
     training.findById(id)
     .then(training => {
-        res.render("trainings/training-details", { training })
+        res.render("trainings/training-detail", { training })
     })
     .catch(err => {
         console.log(err)
@@ -74,12 +78,13 @@ router.get("/trainings/:id/edit", (req, res) => {
 
 router.post("/trainings/:id/edit", (req, res) => {
     const id = req.params.id
-    const { name, occupation, catchPhrase } = req.body
+    const { days, goal, level, description } = req.body
 
     const training = {
-        name,
-        occupation,
-        catchPhrase
+        days,
+        goal,
+        level,
+        description
     }
 
     training.findByIdAndUpdate(id, training)

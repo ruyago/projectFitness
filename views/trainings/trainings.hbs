@@ -1,9 +1,9 @@
 <div class="container">
-    <h2>trainings</h2>
+    <h2>Trainings</h2>
     {{#each trainings}}
-        <p>Name: {{this.name}}</p>
-        <a href="/trainings/{{this._id}}">View {{this.name}}</a>
-    {{/each}}
-    <a href="/trainings/create">Add celebrity</a>
+        <p>Goal: {{this.goal}}</p>
+        <a href="/trainings/{{this._id}}">View {{this.goal}}</a>
+    {{/each}}</br></br>
+    <a href="/trainings/create">Add another training</a></br>
     <a href="/">Home</a>
 </div>

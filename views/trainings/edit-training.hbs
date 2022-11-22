@@ -1,14 +1,20 @@
 <div class="container">
-    <h2>Edit {{trainings.name}}</h2>
-    <form action="/trainings/edit" method="POST">
-        <label for="name">Name: </label>
-        <input type="text" name="name" id="name" value="{{training.name}}">
+    <h2>Edit {{training.goal}}</h2>
+    <form action="/trainings/{{training._id}}/edit" method="POST">
+        <label for="goal">Goal: </label>
+        <input type="text" name="goal" id="goal" value="{{training.goal}}">
 
-        <label for="occupation">Occupation: </label>
-        <input type="text" name="occupation" id="occupation" value="{{training.occupation}}">
+        <label for="days">Days: </label>
+        <input type="date" name="days" id="days" value="{{training.days}}">
 
-        <label for="catchPhrase">Catch phrase: </label>
-        <input type="text" name="catchPhrase" id="catchPhrase" value="{{training.catchPhrase}}">
+        <label for="level">Level: </label>
+        <input type="text" name="level" id="level" value="{{training.level}}">
+
+        <label for="description">Description: </label>
+        <input type="text" name="description" id="description" value="{{training.description}}">
+
+        <label for="other">other: </label>
+        <input type="checkbox" name="other" id="other" value="{{training.other}}">
 
         <button type="submit">Save</button>
     </form>
