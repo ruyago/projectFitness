@@ -36,7 +36,7 @@ h1 {
 
 h2 {
   font-family: 'Noto Serif Khojki', serif;
-  color: rgb(3, 28, 28);
+  color: rgb(217, 228, 228);
   align-items: ;
 }
 
@@ -197,9 +197,19 @@ input {
   width: 50%; */
 
 }
-
+#ready {
+  color: rgb(3, 28, 28);
+}
 .add-my-training{
- position:
+display: flex;
+justify-content: center;
+}
+
+.add-my-training-button{
+  color: #cde0e7;
+  background-color: #1d444b;
+  padding: 15px;
+  border-radius: 10px;
 }
 
 .menu-list{
