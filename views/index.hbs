@@ -6,25 +6,28 @@
 {{#if user}}
 <h2>Are you ready {{user.username}}?</h2>
     <button>
-        <a href="/auth/profile">Visit your Profile</a>
+        <a href="/trainings">Visit your Profile</a>
     </button>
 
 
 {{else}}
 <!--LOGIN !-->
-<container id="home-divided">
+<container id="home-divided">	
+	<div class="card">
 <div id="login-form">
   <h2>Log In</h2>
   <form action="/auth/login" method="POST">
-<div>
+<div class="username-password">
     <label> Username
       <input type="text" name="username" placeholder="Your username" autocomplete="off" />
     </label>
 </div>
 
-   <div> <label> Password
-      <input type="password" name="password" placeholder="Your password" autocomplete="off" />
-    </label></div>
+   <div class="username-password"> 
+		<label> Password
+      		<input type="password" name="password" placeholder="Your password" autocomplete="off" />
+    	</label>
+	</div>
 
     <div><button id="button-login" type="submit">Log In</button></div>
 
@@ -34,10 +37,11 @@
     {{/if}}
   </form>
 </div>
-
+</div>
 <!--signup !-->
+<div class="card">
 <div id="signup-form">
-<div id="form">
+<div id="login-form">
  <h2>Sign Up</h2>
  <div id="register">Register your account.</div>
   <div id="enjoy">Enjoy the Tracker.</div>
@@ -60,6 +64,7 @@
     {{/if}}
   </form>
   {{/if}}
+</div>
 </div>
 </div>
 </container>

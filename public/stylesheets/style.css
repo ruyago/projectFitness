@@ -9,7 +9,7 @@
 input{
   background: #f8fafc ;
   border: 0;
-  width: 100%;
+  width: 250px;
   display: block;
   padding: 10px 15px;
   border-radius: 5px;
@@ -34,6 +34,8 @@ h1 {
 
 h2 {
   font-family: 'Noto Serif Khojki', serif;
+  color: aqua;
+  align-items: ;
 }
 
 #home-text {
@@ -45,9 +47,11 @@ h2 {
 }
 #register{
   font-family: 'Noto Serif Khojki', serif;
+  color: rgb(255, 255, 255);
 }
 #enjoy{
   font-family: 'Noto Serif Khojki', serif;
+  color: rgb(255, 255, 255);
 }
 
 
@@ -60,13 +64,19 @@ body{
   background-image: url("../images/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 0%;
 
 }
 
+.username-password{
+display: block;
+text-align: center;
 
+}
 
 label{
-
+  
+  color: rgb(128, 183, 183);
   font-family: 'Noto Serif Khojki', serif;
   
 }
@@ -77,6 +87,12 @@ label{
   flex-direction: row;
   justify-content: space-evenly;
   align-items: baseline;
+}
+
+.card {
+  display: block;
+  background-color: #000607;
+  border-radius: 30px;
 }
 
 #login-form{
@@ -102,6 +118,19 @@ label{
   font-size: 15px;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+#button-signup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  cursor: pointer;
+  padding: 10 100px;
+  margin-top: 20px;
+  margin-left: 14px;
+  margin-right: 14px;
+  font-size: 15px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
 #hidden {
 
@@ -117,19 +146,7 @@ label{
   font-size: 20px;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
-#button-signup {
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  cursor: pointer;
-  padding: 10 100px;
-  margin-top: 20px;
-  margin-left: 0px;
-  font-size: 15px;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
 
 #exercises {
   display: flex;
@@ -176,16 +193,43 @@ input {
 
 .menu-list{
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
+  align-items: center;  
   color: black;
-  width:100%;
-  height: 35px;
+  width: 100%;
+  height: 45px;
   padding: 5px 0;
-  
+  background-color: rgb(9, 8, 8);
+  position: fixed;
+  top: 0;
   }
 
+.home {
+  padding-left: 50px;
+  padding-right: 15px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.mytrainings {
+  padding-left: 15px;
+  padding-right: 15px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.logout {
+  padding-left: 15px;
+  padding-right: 15px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* .logo {
+  padding-left: 500px;
+  font-family: 'Black Han Sans', sans-serif;
+  text-decoration: none;
+
+} */
 
 /* a {
 	cursor: pointer;
@@ -481,3 +525,4 @@ align-items: center;
 	display: block;
 }
 */
+
