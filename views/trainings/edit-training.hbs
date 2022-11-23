@@ -1,10 +1,10 @@
 <div class="container">
     <h1>Edit {{training.exercise}}</h1>
     <form action="/trainings/{{training._id}}/edit" method="POST">
-        <label for="distance">Distance: </label>
-        <input type="number" name="distance" id="distance" value="{{training.distance}}">
         <label for="date">Date: </label>
         <input type="date" name="date" id="date" value="{{training.date}}">
+        <label for="distance">Distance: </label>
+        <input type="number" name="distance" id="distance" value="{{training.distance}}">
         <label for="time">Time: </label>
         <input type="number" name="time" id="time" value="{{training.time}}">
         <label for="pace">Pace: </label>

@@ -3,8 +3,9 @@
     <h1 id="trainings-title">Trainings</h1>
     <div id="container-trainings">
     {{#each newTrainings}}
-        <a class="training-card" href="/trainings/{{this._id}}">View {{this.date}}</a>
+        <a class="training-card" href="/trainings/{{this._id}}">{{this.date}}</a>
     {{/each}}</br></br>
-
-</div></div></container>
+</div>
+    </div>
+</container>
     <button class="add-button"><a href="/trainings/create">Add another training</a></button>

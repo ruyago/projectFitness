@@ -3,7 +3,7 @@ const training = require("../models/training.model")
 const { format } = require('date-fns')
 // Create training
 router.get("/trainings/create", (req, res) => {
-    res.render("trainings/new-training")
+    res.render("trainings/new-training", {user : req.session.currentUser})
 })
 router.post("/trainings/create", (req, res) => {
     const userID = req.session.currentUser._id
@@ -21,7 +21,7 @@ router.post("/trainings/create", (req, res) => {
             res.redirect("/trainings")
         })
         .catch(err => {
-            res.render("trainings/new-training", { errorMessage: "Wrong credentials." })
+            res.render("trainings/new-training", {errorMessage: "Wrong credentials." })
         })
 })
 // Get trainings
@@ -41,7 +41,7 @@ router.get("/trainings/:id", (req, res) => {
     training.findById(id)
         .then(training => {
             const newTraining = { ...training.toJSON(), date: format(new Date(training.date), 'dd/MM/yyyy') }
-            res.render("trainings/training-detail", { newTraining })
+            res.render("trainings/training-detail", { newTraining, user : req.session.currentUser })
         })
         .catch(err => {
             console.log(err)
@@ -64,7 +64,7 @@ router.get("/trainings/:id/edit", (req, res) => {
     training.findById(id)
         .then(training => {
             console.log(training)
-            res.render("trainings/edit-training", { training })
+            res.render("trainings/edit-training", { training, user : req.session.currentUser })
         })
         .catch(err => {
             console.log(err)
