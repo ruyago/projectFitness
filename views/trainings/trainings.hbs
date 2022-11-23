@@ -1,11 +1,10 @@
 <container class="training-create">
 <div class="container">
-    <h1>Trainings</h1>
+    <h1 id="trainings-title">Trainings</h1>
     <div id="container-trainings">
-    {{#each trainings}}
-        <p>Training: {{this.date}}</p>
-        <a href="/trainings/{{this._id}}">View {{this.date}}</a>
+    {{#each newTrainings}}
+        <a class="training-card" href="/trainings/{{this._id}}">View {{this.date}}</a>
     {{/each}}</br></br>
 
 </div></div></container>
-    <button><a href="/trainings/create">Add another training</a></button>
+    <button class="add-button"><a href="/trainings/create">Add another training</a></button>
