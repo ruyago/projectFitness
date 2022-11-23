@@ -160,6 +160,21 @@ input {
 
 }
 
+.tracker-inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 0;
+  width: 80%;
+  padding: 20px 15px;
+  border-radius: 5px;
+  margin-bottom: 20px !important;
+  
+  background-color: rgb(194, 232, 234);
+
+}
+
+
 /* a {
 	cursor: pointer;
   transition: all 200ms linear;
