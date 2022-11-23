@@ -1,10 +1,10 @@
 <container id="container-trainings">
 <div class="container">
     <h1>Training detail</h1>
-    <p><b>Exercise:</b> {{training.exercise}}</p>
     <p><b>Date:</b> {{training.date}}</p>
-    <p><b>Sets:</b> {{training.sets}}</p>
-    <p><b>Reps:</b> {{training.reps}}</p>
+    <p><b>Distance:</b> {{training.distance}}</p>
+    <p><b>Time:</b> {{training.time}}</p>
+    <p><b>Pace:</b> {{training.pace}}</p>
     <button><a href="/trainings/{{training._id}}/edit">Edit {{training.exercise}}</a></button>
     <form action="/trainings/{{training._id}}/delete" method="POST">
         <button type="submit">Delete {{training.exercise}}</button>

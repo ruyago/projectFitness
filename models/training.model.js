@@ -7,17 +7,17 @@ const trainingSchema = new Schema(
       type: Date,
       required: [true, "Please add how many date per week you are going to train."],
     },
-    exercise: {
-        type: String,
+    distance: {
+        type: Number,
         required: true,
       },
-    sets: {
+    time: {
         type: Number,
         required: true,
       },
 
-    reps: {
-        type: Number,
+    pace: {
+        type: String,
         required: true,
       },  
       user: {

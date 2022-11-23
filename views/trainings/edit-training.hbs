@@ -1,17 +1,17 @@
 <div class="container">
     <h1>Edit {{training.exercise}}</h1>
     <form action="/trainings/{{training._id}}/edit" method="POST">
-        <label for="exercise">Exercise: </label>
-        <input type="text" name="exercise" id="exercise" value="{{training.exercise}}">
+        <label for="distance">Distance: </label>
+        <input type="number" name="distance" id="distance" value="{{training.exercise}}">
 
         <label for="date">Date: </label>
         <input type="date" name="date" id="date" value="{{training.date}}">
 
-        <label for="sets">Sets: </label>
-        <input type="text" name="sets" id="sets" value="{{training.sets}}">
+        <label for="time">Time: </label>
+        <input type="number" name="time" id="time" value="{{training.time}}">
 
-        <label for="reps">Reps: </label>
-        <input type="text" name="reps" id="reps" value="{{training.reps}}">
+        <label for="pace">Pace: </label>
+        <input type="text" name="pace" id="pace" value="{{training.pace}}">
 
 
         <button type="submit">Save</button>

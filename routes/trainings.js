@@ -9,14 +9,14 @@ router.get("/trainings/create", (req, res) => {
 router.post("/trainings/create", (req, res) => {
     const userID = req.session.currentUser._id
 
-    console.log("USERID: ", userID)
-    const { date, exercise, sets, reps } = req.body
+    console.log(userID)
+    const { date, distance, time, pace } = req.body
 
     training.create({
         date,
-        exercise,
-        sets,
-        reps,
+        distance,
+        time,
+        pace,
         user: userID,
     })
     .then(createdtraining => {
@@ -32,7 +32,7 @@ router.post("/trainings/create", (req, res) => {
 router.get("/trainings", (req, res) => {
     training.find()
     .then(trainings => {
-        res.render("trainings/trainings", { trainings, user : req.session.currentUser  })
+        res.render("trainings/trainings", { trainings })
     })
     .catch(err => {
         console.log(err)
@@ -45,7 +45,7 @@ router.get("/trainings/:id", (req, res) => {
 
     training.findById(id)
     .then(training => {
-        res.render("trainings/training-detail", { training, user : req.session.currentUser })
+        res.render("trainings/training-detail", { training })
     })
     .catch(err => {
         console.log(err)
@@ -80,13 +80,13 @@ router.get("/trainings/:id/edit", (req, res) => {
 
 router.post("/trainings/:id/edit", (req, res) => {
     const id = req.params.id
-    const { date, exercise, sets, reps } = req.body
+    const { date, distance, time, pace } = req.body
 
     const training = {
         date,
-        exercise,
-        sets,
-        reps
+        distance,
+        time,
+        pace
     }
 
     training.findByIdAndUpdate(id, training)

@@ -1,14 +1,15 @@
 <div class="homepage">
-<h1>FITNESS TRACKER</h1>
+<h1>MARATHON TRACKER</h1>
 <p id="home-text">Trust the process</p>
 
 
 {{#if user}}
+<div class="profile-show">
 <h2>Are you ready {{user.username}}?</h2>
     <button>
         <a href="/trainings">Visit your Profile</a>
     </button>
-
+</div>
 
 {{else}}
 <!--LOGIN !-->
