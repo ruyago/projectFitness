@@ -33,6 +33,7 @@ router.get("/trainings", (req, res) => {
     training.find()
     .then(trainings => {
         res.render("trainings/trainings", { trainings, user : req.session.currentUser })
+
     })
     .catch(err => {
         console.log(err)

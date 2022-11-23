@@ -21,6 +21,7 @@ input{
 
 a {
   color: #00b7ff;
+  text-decoration: none;
 }
 
 h1 {
@@ -35,7 +36,7 @@ h1 {
 
 h2 {
   font-family: 'Noto Serif Khojki', serif;
-  color: aqua;
+  color: rgb(3, 28, 28);
   align-items: ;
 }
 
@@ -179,17 +180,26 @@ input {
 }
 
 .tracker-inputs {
+  background-color: rgba(194, 232, 234, 0.872);
+  border-radius: 30px;
+  padding: 50px;
+}
+
+.form-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border: 0;
-  width: 80%;
-  padding: 20px 15px;
+
+  /* align-items: center;
   border-radius: 5px;
   margin-bottom: 20px !important;
-  
-  background-color: rgb(194, 232, 234);
+  background-color: rgba(194, 232, 234, 0.872);
+  width: 50%; */
 
+}
+
+.add-my-training{
+ position:
 }
 
 .menu-list{
@@ -225,13 +235,6 @@ input {
   font-size: 16px;
 }
 
-/* .logo {
-  padding-left: 500px;
-  font-family: 'Black Han Sans', sans-serif;
-  text-decoration: none;
-
-} */
-
 .profile-show {
 
   display: flex;
@@ -251,6 +254,21 @@ input {
 	height: 26px;
 	width: auto;
 	display: block;
+}
+
+.view-trainings-button {
+  border-radius: 30px;
+  display: block;
+  background-color: rgb(3, 28, 28);
+  padding: 30px;
+  font-size: 25px;
+  cursor: pointer;
+  border: 0;
+}
+
+#button-link{
+  color: #00b7ff;
+  font-family: 'Noto Serif Khojki', serif;
 }
 
 
