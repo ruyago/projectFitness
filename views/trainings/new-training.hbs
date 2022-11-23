@@ -1,46 +1,72 @@
 <div id="appender" class="container">
     <h1>Add your training</h1>
 
-<div id="test">
-    <div id="second">
+    <div id="test">
+        <div id="second">
 
-    <form action="/trainings/create" id="exercises" method="POST">
+            <form action="/trainings/create" class="exercises" method="POST">
+                <div class="form-wrapper">
+                    <div class="tracker-inputs">
+                        <label for="date">Date: </label>
+                        <input type="date" name="date" >
 
-          
-        <label for="date">Date: </label>
-        <input type="date" name="date" id="date">
+                        <label for="exercise">Exercise: </label>
+                        <input type="text" name="exercise" >
 
-        <label for="exercise">Exercise: </label>
-        <input type="text" name="exercise" id="exercise">
+                        <label for="sets">Sets: </label>
+                        <input type="number" name="sets" >
 
-        <label for="sets">Sets: </label>
-        <input type="number" name="sets" id="sets">
+                        <label for="reps">Reps: </label>
+                        <input type="number" name="reps" ></br>
 
-         <label for="reps">Reps: </label>
-        <input type="number" name="reps" id="reps"></br>
+                        <button type="button" class="addButton">+</button>
+                    </div>
 
-
-
-<button type="submit">Add my training</button>
-        </form>
+                </div>
+                <button type="submit">Add my training</button>
+            </form>
         </div>
-   </div>
-   <button type="button" onclick="repeat()" id="addButton">+</button>
-        <br>
+    </div>
+</div>
+<br>
 
 
 
 </div>
 <script>
 
-const original = document.getElementById("second")
-const toAppend = document.getElementById("test")
+    const original = document.getElementById("second")
+    const toAppend = document.getElementById("test")
 
 
 
-function repeat() {
-    const clone = original.cloneNode(true)
-    toAppend.appendChild(clone)
-        }
+    function repeat() {
+        const template = `
+            <div class="tracker-inputs">
+                    <label for="date">Date: </label>
+                    <input type="date" name="date" class="date">
+
+                    <label for="exercise">Exercise: </label>
+                    <input type="text" name="exercise" class="exercise">
+
+                    <label for="sets">Sets: </label>
+                    <input type="number" name="sets" class="sets">
+
+                    <label for="reps">Reps: </label>
+                    <input type="number" name="reps" class="reps"></br>
+
+                    <button type="button" class="addButton">+</button>
+                </div>        
+        `
+        const formWrapper = document.querySelector(".form-wrapper")
+        const inputFields = document.createElement("div")
+        formWrapper.appendChild(inputFields)
+        inputFields.classList.add("form-wrapper")
+        inputFields.innerHTML += template
+        inputFields.querySelector(".addButton").addEventListener("click", repeat)
+    }
+
+
+    document.querySelector(".addButton").addEventListener("click", repeat)
 
 </script>
