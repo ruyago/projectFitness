@@ -1,4 +1,81 @@
-<h1>{{appTitle}} 🚀</h1>
+<div class="homepage">
+<h1>FITNESS TRACKER</h1>
+<p id="home-text">Trust the process</p>
+
+
+
+<!--LOGIN !-->
+<container id="home-divided">
+<div id="login-form">
+  <h2>Log In</h2>
+  <form action="/auth/login" method="POST">
+<div>
+    <label> Username
+      <input type="text" name="username" placeholder="Your username" autocomplete="off" />
+    </label>
+</div>
+
+   <div> <label> Password
+      <input type="password" name="password" placeholder="Your password" autocomplete="off" />
+    </label></div>
+
+    <div><button id="button-login" type="submit">Log In</button></div>
+
+
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
+  </form>
+</div>
+
+<!--signup !-->
+<div id="signup-form">
+<div id="form">
+ <h2>Sign Up</h2>
+ <div id="register">Register your account.</div>
+  <div id="enjoy">Enjoy the Tracker.</div>
+  <form action="/auth/signup" method="POST">
+	<div id="hidden">
+    <label> Username
+      <input type="text" name="username" placeholder="Your username" />
+    </label>
+
+
+    <label> Password
+      <input type="password" name="password" placeholder="Your password" />
+    </label></div>
+
+    <button id="button-signup" type="submit">Sign Up</button>
+
+
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
+  </form>
+</div>
+</div>
+</container>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h1>{{appTitle}} 🚀</h1>
 <p>Welcome Ironhacker!</p>
 
 <div id="to-right">
@@ -10,7 +87,7 @@
     
 
 
-</div>
+</div>!--> 
 
 	<!--
 	<div class="section">

@@ -1,5 +1,5 @@
 <div class="container">
-    <h2>Edit {{training.exercise}}</h2>
+    <h1>Edit {{training.exercise}}</h1>
     <form action="/trainings/{{training._id}}/edit" method="POST">
         <label for="exercise">Exercise: </label>
         <input type="text" name="exercise" id="exercise" value="{{training.exercise}}">
