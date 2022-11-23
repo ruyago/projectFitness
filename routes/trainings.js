@@ -32,7 +32,7 @@ router.post("/trainings/create", (req, res) => {
 router.get("/trainings", (req, res) => {
     training.find()
     .then(trainings => {
-        res.render("trainings/trainings", { trainings })
+        res.render("trainings/trainings", { trainings, user : req.session.currentUser  })
     })
     .catch(err => {
         console.log(err)
@@ -45,7 +45,7 @@ router.get("/trainings/:id", (req, res) => {
 
     training.findById(id)
     .then(training => {
-        res.render("trainings/training-detail", { training })
+        res.render("trainings/training-detail", { training, user : req.session.currentUser })
     })
     .catch(err => {
         console.log(err)

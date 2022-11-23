@@ -8,7 +8,17 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
 <header>
-<nav></nav>
+<nav class="menu-list">
+     {{#if user}}
+      <a  href="/"> Home</a>
+      <a href="/trainings"> My Trainings</a>
+      <a href="/auth/logout"> Logout</a>
+      {{else }}
+      <a href="/auth/login"> Login</a>
+      {{/if}}
+      
+      
+      </nav>
 
 </header>
   <body>
