@@ -6,7 +6,7 @@ const router = express.Router();
 router.get("/", (req, res, next) => {
   console.log("hit")
   User.find().then((users)=> 
-  console.log(users)).then(()=>   res.render("index")
+  console.log(users)).then(()=>   res.render("index", {user : req.session.currentUser} )
   )
 });
 module.exports = router;

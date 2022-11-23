@@ -3,7 +3,14 @@
 <p id="home-text">Trust the process</p>
 
 
+{{#if user}}
+<h2>Are you ready {{user.username}}?</h2>
+    <button>
+        <a href="/auth/profile">Visit your Profile</a>
+    </button>
 
+
+{{else}}
 <!--LOGIN !-->
 <container id="home-divided">
 <div id="login-form">
@@ -52,6 +59,7 @@
       <p class="error">{{errorMessage}}</p>
     {{/if}}
   </form>
+  {{/if}}
 </div>
 </div>
 </container>
