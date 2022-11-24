@@ -21,6 +21,7 @@ input{
 
 a {
   color: #00b7ff;
+  text-decoration: none;
 }
 
 h1 {
@@ -35,8 +36,10 @@ h1 {
 
 h2 {
   font-family: 'Noto Serif Khojki', serif;
-  color: aqua;
-  align-items: center;
+
+  color: rgb(217, 228, 228);
+  align-items: ;
+
 }
 
 #home-text {
@@ -167,17 +170,36 @@ input {
 
 
 .tracker-inputs {
+  background-color: rgba(194, 232, 234, 0.872);
+  border-radius: 30px;
+  padding: 50px;
+}
+
+.form-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border: 0;
-  width: 80%;
-  padding: 20px 15px;
+
+  /* align-items: center;
   border-radius: 5px;
   margin-bottom: 20px !important;
-  
-  background-color: rgb(194, 232, 234);
+  background-color: rgba(194, 232, 234, 0.872);
+  width: 50%; */
 
+}
+#ready {
+  color: rgb(3, 28, 28);
+}
+.add-my-training{
+display: flex;
+justify-content: center;
+}
+
+.add-my-training-button{
+  color: #cde0e7;
+  background-color: #1d444b;
+  padding: 15px;
+  border-radius: 10px;
 }
 
 .menu-list{
@@ -213,12 +235,13 @@ input {
   font-size: 16px;
 }
 
-/* .logo {
-  padding-left: 500px;
-  font-family: 'Black Han Sans', sans-serif;
-  text-decoration: none;
+.profile-show {
 
-} */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 34px;
 
 .profile-show {
 
@@ -325,6 +348,7 @@ input {
 
 .button-details {
 
+
   display: flex;
   flex-direction: row;
   margin-right: 30px;
@@ -353,4 +377,5 @@ input {
 .button-delete{
 
   margin: 0 30px;
+
 }

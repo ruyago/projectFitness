@@ -7,8 +7,10 @@ router.get("/trainings/create", (req, res) => {
 })
 router.post("/trainings/create", (req, res) => {
     const userID = req.session.currentUser._id
+
     console.log(userID)
     const { date, distance, time, pace } = req.body
+
     training.create({
         date,
         distance,
@@ -27,6 +29,7 @@ router.post("/trainings/create", (req, res) => {
 // Get trainings
 router.get("/trainings", (req, res) => {
     training.find()
+
         .then(trainings => {
             const newTrainings = trainings.map(training => ({ ...training.toJSON(), date: format(new Date(training.date), 'dd/MM/yyyy') }))
             res.render("trainings/trainings", { newTrainings, user: req.session.currentUser })
@@ -34,11 +37,13 @@ router.get("/trainings", (req, res) => {
         .catch(err => {
             console.log(err)
         })
+
 })
 // Get training details
 router.get("/trainings/:id", (req, res) => {
     const id = req.params.id
     training.findById(id)
+
         .then(training => {
             const newTraining = { ...training.toJSON(), date: format(new Date(training.date), 'dd/MM/yyyy') }
             res.render("trainings/training-detail", { newTraining, user : req.session.currentUser })
@@ -46,6 +51,7 @@ router.get("/trainings/:id", (req, res) => {
         .catch(err => {
             console.log(err)
         })
+
 })
 // Delete training
 router.post("/trainings/:id/delete", (req, res) => {
@@ -74,6 +80,7 @@ router.post("/trainings/:id/edit", (req, res) => {
     const { id } = req.params
     const { date, distance, time, pace } = req.body
     const trainingData = {
+
         date,
         distance,
         time,

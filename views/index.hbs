@@ -5,9 +5,11 @@
 
 {{#if user}}
 <div class="profile-show">
-<h2>Are you ready {{user.username}}?</h2>
-    <button>
-        <a href="/trainings">Visit your Profile</a>
+
+<h2 id="ready">Are you ready {{user.username}}?</h2>
+    <button
+	class="view-trainings-button">
+        <a href="/trainings" id="button-link" >View your trainings</a>
     </button>
 </div>
 
@@ -167,5 +169,5 @@
 	      	</div>
 	    </div>
 	</div> 
-    
+   
     !>
