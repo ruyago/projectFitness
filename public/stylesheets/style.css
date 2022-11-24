@@ -36,8 +36,10 @@ h1 {
 
 h2 {
   font-family: 'Noto Serif Khojki', serif;
+
   color: rgb(217, 228, 228);
   align-items: ;
+
 }
 
 #home-text {
@@ -166,18 +168,6 @@ input {
 }
 
 
-#container-trainings {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-  margin: 30 30px;
-  font-size: 18px;
-  background-color: white;
-  padding: 25 25 480 25px;
-  border-radius: 50px;
-
-}
 
 .tracker-inputs {
   background-color: rgba(194, 232, 234, 0.872);
@@ -253,6 +243,14 @@ justify-content: center;
   align-items: center;
   font-size: 34px;
 
+.profile-show {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 34px;
+
 }
 
 #text-profile {
@@ -260,36 +258,124 @@ justify-content: center;
   font-family: 'Special Elite', cursive;
 }
 
-.logo img {
-	height: 26px;
-	width: auto;
+
+
+
+.logo {
+	position: absolute;
+	top: 30px;
+	right: 30px;
 	display: block;
+	z-index: 100;
+	transition: all 250ms linear;
 }
 
-.view-trainings-button {
-  border-radius: 30px;
-  display: block;
-  background-color: rgb(3, 28, 28);
+
+
+/* Thursday night */
+
+.training-card {
+  background-color: ghostwhite;
+  border-radius: 50px;
+  border-color: black;
+  padding: 20px;
+  margin: 20px;
+  color: black;
+  border: 1px solid;
+}
+
+
+.link-create{
+  background-color: ghostwhite;
+  padding: 20px;
+  margin: 20px;
+  color: black;
+ 
+}
+
+
+
+
+#detail-title {
+  
+  font-size: 35px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  margin-left: 30%;
+  margin-top: 5%;
+  font-size: 20px;
+  line-height: 1.5;
+  background-color: white;
+  border-radius: 50px;
+  border: 3px solid;
+  width: 500px;
+  height: 700px;
+
+}
+
+#container-trainings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin: 30 30px;
+  font-size: 18px;
+  background-color: white;
+  padding: 25 25 480 25px;
+  border: 3px solid;
+  border-radius: 50px;
+
+
+}
+
+
+#trainings-title {
+
+  padding-top: 40px;
+
+ 
+}
+
+.button-details {
+
+
+  display: flex;
+  flex-direction: row;
+  margin-right: 30px;
+  margin-top: 80px;
+ 
+}
+
+.detail {
+  
+  padding: 15px;
+  margin-bottom: 20px;
+  color: black;
+  width: 100px;
+  border-radius: 50px;
+
+}
+
+.add-button {
+  margin-top: -70px;
+  margin-left: 40%;
+  border-radius: 10px;
   padding: 30px;
-  font-size: 25px;
-  cursor: pointer;
-  border: 0;
+  font-size: 24px;
 }
 
-#button-link{
-  color: #00b7ff;
-  font-family: 'Noto Serif Khojki', serif;
-}
+.button-delete{
 
-
-.training-create {
-
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-align-items: baseline;
-font-size: 18px;
-background-color: rgb(244, 248, 248);
-padding-bottom: 40px;
+  margin: 0 30px;
 
 }
