@@ -234,8 +234,7 @@ justify-content: center;
   border-radius: 10px;
 }
 
-
-  .marathontracker {
+.marathontracker {
     
     color: rgb(188, 197, 197);
   }
@@ -468,3 +467,16 @@ header {
 
 
 
+
+.save{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.save-button{
+  border-radius: 30px;
+  background-color: #45bba360;
+  padding: 15 35px;
+  border: 0;
+}
