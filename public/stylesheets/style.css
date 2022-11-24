@@ -101,7 +101,11 @@ label{
   border-radius: 30px;
 }
 
-.login-form{
+.username2 {
+  display: flex;
+  justify-content: center;
+}
+#login-form{
 
   display: flex;
   flex-direction: column;
@@ -226,6 +230,10 @@ input {
 display: flex;
 justify-content: center;
 }
+.login2{
+  color: #000607;
+}
+
 
 .add-my-training-button{
   color: #cde0e7;

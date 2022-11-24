@@ -1,26 +1,29 @@
-<div class="login-form2">
-  <h2 class="color-login">Log In</h2>
+<div id="login-form">
+  <h2 class="login2">Log In</h2>
   <form action="/auth/login" method="POST">
-
-    <label class="color-login"> Username
+  
+  <div class="username2">
+    <label> Username
       <input type="text" name="username" placeholder="Your username" autocomplete="off" />
     </label>
+  </div>
 
-
-   <label class="color-login"> Password
+<div class="username2">
+    <label> Password
       <input type="password" name="password" placeholder="Your password" autocomplete="off" />
     </label>
-
-    <button class="button-login2" type="submit">Log In</button>
-
+</div>
+<div class="username2">
+    <button id="button-login" type="submit">Log In</button>
 </div>
     {{!-- test 2 --}}
   
-
+<div class="username2">
 
     {{#if errorMessage}}
       <p class="error">{{errorMessage}}</p>
     {{/if}}
+</div>
   </form>
   </br>
   </br>
