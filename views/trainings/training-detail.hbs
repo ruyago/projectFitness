@@ -1,13 +1,15 @@
-<container id="container-trainings">
-<div class="container">
-    <h1>Training detail</h1>
-    <p><b>Date:</b> {{training.date}}</p>
-    <p><b>Distance:</b> {{training.distance}}</p>
-    <p><b>Time:</b> {{training.time}}</p>
-    <p><b>Pace:</b> {{training.pace}}</p>
-    <button><a href="/trainings/{{training._id}}/edit">Edit {{training.exercise}}</a></button>
-    <form action="/trainings/{{training._id}}/delete" method="POST">
-        <button type="submit">Delete {{training.exercise}}</button>
-    </form>
-</div></container>
-    <button><a href="/trainings">Back to trainings</a></button>
+
+
+    <h1 id="detail-title">Training detail</h1>
+<div class="container-detail">
+        <div><b>Date:</b> {{newTraining.date}}</div>
+        <div><b>Distance:</b> {{newTraining.distance}} km</div>
+        <div><b>Time:</b> {{newTraining.time}} min</div>
+        <div><b>Pace:</b> {{newTraining.pace}} min/km</div>
+        <div class="button-details">
+        <div><button class="detail"><a href="/trainings/{{newTraining._id}}/edit">Edit {{newTraining.edit}}</a></button></div>
+        <form action="/trainings/{{newTraining._id}}/delete" method="POST">
+           <div><button type="submit" class="detail">Delete {{newTraining.delete}}</button></div>
+        </form>
+    <div><button class="detail"><a href="/trainings">Trainings</a></button></div>
+</div>
