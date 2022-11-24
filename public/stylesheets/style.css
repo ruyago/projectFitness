@@ -230,12 +230,36 @@ justify-content: center;
   cursor: pointer;
   margin-left: 10px;
 }
+
+.container{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
 .link-create{
-  background-color: ghostwhite;
+  display: flex;
+  
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: #45bba3f1;
   padding: 20px;
-  margin: 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 0;
+  
+}
+
+.link-create a {
   color: black;
 }
+
+.link-create a:hover{
+  color: #1b3b41;
+}
+
+
+
+
 .edit-delete {
   background-color: rgb(237, 228, 228);
   border-radius: 50px;
@@ -305,8 +329,9 @@ justify-content: center;
   border-radius: 50px;
 }
 .add-button {
-  margin-top: -70px;
-  margin-left: 40%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
   border-radius: 10px;
   padding: 30px;
   font-size: 24px;
