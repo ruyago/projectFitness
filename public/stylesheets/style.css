@@ -49,11 +49,11 @@ h2 {
 }
 #register{
   font-family: 'Noto Serif Khojki', serif;
-  color: rgb(255, 255, 255);
+  color: rgb(128, 183, 183);
 }
 #enjoy{
   font-family: 'Noto Serif Khojki', serif;
-  color: rgb(255, 255, 255);
+  color:rgb(128, 183, 183);
 }
 
 
@@ -73,6 +73,8 @@ body{
 .username-password{
 display: block;
 text-align: center;
+color: rgb(128, 183, 183);
+  font-family: 'Noto Serif Khojki', serif;
 
 }
 
@@ -185,6 +187,10 @@ input {
   padding: 50px;
 }
 
+.labelTracker {
+  color: #0a0a0b;
+}
+
 .form-wrapper {
   display: flex;
   flex-direction: row;
@@ -198,7 +204,7 @@ input {
 
 }
 #ready {
-  color: rgb(3, 28, 28);
+  color: rgb(0, 0, 0)
 }
 .add-my-training{
 display: flex;
@@ -229,6 +235,7 @@ justify-content: center;
   padding-right: 15px;
   text-decoration: none;
   font-size: 16px;
+  color: rgb(128, 183, 183);
 }
 
 .mytrainings {
@@ -236,6 +243,7 @@ justify-content: center;
   padding-right: 15px;
   text-decoration: none;
   font-size: 16px;
+  color: rgb(128, 183, 183);
 }
 
 .logout {
@@ -243,6 +251,7 @@ justify-content: center;
   padding-right: 15px;
   text-decoration: none;
   font-size: 16px;
+  color: rgb(128, 183, 183);
 }
 
 .profile-show {
@@ -269,7 +278,7 @@ justify-content: center;
 .view-trainings-button {
   border-radius: 30px;
   display: block;
-  background-color: rgb(3, 28, 28);
+  background-color: rgb(14, 14, 14);
   padding: 30px;
   font-size: 25px;
   cursor: pointer;
@@ -277,7 +286,7 @@ justify-content: center;
 }
 
 #button-link{
-  color: #00b7ff;
+  color: rgb(239, 245, 245);
   font-family: 'Noto Serif Khojki', serif;
 }
 
