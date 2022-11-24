@@ -6,6 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Khojki&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Khojki&display=swap');
 input{
   background: #F8FAFC ;
   border: 0;
@@ -326,7 +327,7 @@ justify-content: center;
 #button-link{
   color: rgb(239, 245, 245);
 
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Noto Serif Khojki', serif;
 
 
 }

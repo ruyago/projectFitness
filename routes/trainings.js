@@ -30,14 +30,6 @@ router.post("/trainings/create", (req, res) => {
     })
     .catch(err => {
         
-                if (distance === "" || time === "" || pace === "") {
-                    res.status(400).render("trainings/new-training", {
-                      errorMessage:
-                        "All fields are mandatory.",
-                    });
-                
-                    return;
-                  }
         res.render("trainings/new-training", {errorMessage: "Wrong credentials.", user : req.session.currentUser })
     })
 })
@@ -85,7 +77,8 @@ router.get("/trainings/:id/edit", (req, res) => {
     training.findById(id)
         .then(training => {
             console.log(training)
-            res.render("trainings/edit-training", { training, user : req.session.currentUser })
+            let date2 = training.date.toISOString().split("T")[0];
+            res.render("trainings/edit-training", { training, date2, user : req.session.currentUser })
         })
         .catch(err => {
             console.log(err)
