@@ -7,16 +7,15 @@
     <title>{{appTitle}}</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
-<header>
   {{#if user}}
-  <nav class="menu-list">
-
-      <a href="/" class="home"> Home</a>
-      <a href="/trainings" class="mytrainings">My trainings</a>
-      <a href="/auth/logout" class="logout"> Logout</a>
-      {{!-- <a href="/" class="logo">Marathon Tracker</a> --}}
-      
-      
+<header>
+  <a href="/" class="logo">MARATHON TRACKER</a>
+  <nav>
+    <ul class="nav_links">
+     <li> <a href="/" class="home"> Home</a></li>
+     <li> <a href="/trainings" class="mytrainings">My trainings</a></li>
+     <li> <a href="/auth/logout" class="logout"> Logout</a></li>
+    </ul>
   </nav>
 
 </header>

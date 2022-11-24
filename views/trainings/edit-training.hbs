@@ -1,19 +1,21 @@
+
+<div id="appender" class="container">
+
+
+
 <div class="container">
     <h1>Edit {{training.exercise}}</h1>
-    <form action="/trainings/{{training._id}}/edit" method="POST">
-        <label for="distance">Distance: </label>
-        <input type="number" name="distance" id="distance" value="{{training.exercise}}">
-
-        <label for="date">Date: </label>
-        <input type="date" name="date" id="date" value="{{training.date}}">
-
-        <label for="time">Time: </label>
-        <input type="number" name="time" id="time" value="{{training.time}}">
-
-        <label for="pace">Pace: </label>
-        <input type="text" name="pace" id="pace" value="{{training.pace}}">
-
-
-        <button type="submit">Save</button>
+    <form action="/trainings/{{training._id}}/edit" class="exercises" method="POST">
+    <div class="form-wrapper">
+                    <div class="tracker-inputs">
+        <div><label for="date" class="labelTracker">Date: </label>
+        <input type="date" name="date" id="date" value="{{newTraining.date}}"></div>
+        <div><label for="distance" class="labelTracker">Distance: </label>
+        <input type="text" name="distance" id="distance" value="{{training.distance}}"></div>
+        <div><label for="time" class="labelTracker">Time: </label>
+        <input type="text" name="time" id="time" value="{{training.time}}"></div>
+        <div><label for="pace" class="labelTracker">Pace: </label>
+        <input type="text" name="pace" id="pace" value="{{training.pace}}"></div>
+        <div class="save"><button type="submit" class="save-button"> <b> Save </b></button></div>
     </form>
-</div>
+</div></div></div></div>

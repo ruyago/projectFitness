@@ -1,25 +1,29 @@
 <div id="login-form">
-  <h2>Log In</h2>
+  <h2 class="login2">Log In</h2>
   <form action="/auth/login" method="POST">
-
+  
+  <div class="username2">
     <label> Username
       <input type="text" name="username" placeholder="Your username" autocomplete="off" />
     </label>
+  </div>
 
-
+<div class="username2">
     <label> Password
       <input type="password" name="password" placeholder="Your password" autocomplete="off" />
     </label>
-
+</div>
+<div class="username2">
     <button id="button-login" type="submit">Log In</button>
-
+</div>
     {{!-- test 2 --}}
   
-
+<div class="username2">
 
     {{#if errorMessage}}
       <p class="error">{{errorMessage}}</p>
     {{/if}}
+</div>
   </form>
 </div>
 <hr>
