@@ -1,4 +1,5 @@
 <div class="container-detail">
+
     <h1 id="detail-title">Training details</h1>
     <div><b>Date:</b> {{newTraining.date}}</div>
     <div><b>Distance:</b> {{newTraining.distance}} km</div>
@@ -8,6 +9,7 @@
         <div>
             <a class="save-button" href="/trainings/{{newTraining._id}}/edit">Edit {{newTraining.edit}}</a>
         </div>
+
         <form action="/trainings/{{newTraining._id}}/delete" method="POST">
                 <div>
                     <button type="submit" class="delete-card"> <b> Delete </b> {{newTraining.delete}}</button>
