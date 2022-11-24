@@ -1,22 +1,28 @@
-<div id="login-form">
-  <h2 class="signup-color">Sign Up</h2>
+<div class="login-form2">
+  <h2 class="color-login">Sign Up</h2>
   <form action="/auth/signup" method="POST">
 
-    <label class="signup-color"> Username
+    <label class="color-login"> Username
       <input type="text" name="username" placeholder="Your username" />
     </label>
 
 
-    <label class="signup-color"> Password
+    <label class="color-login"> Password
       <input type="password" name="password" placeholder="Your password" />
     </label>
 
-    <button id="button-signup" type="submit">Sign Up</button>
+    <button id="button-signup2" type="submit">Sign Up</button>
 
+</div>
 
     {{#if errorMessage}}
       <p class="error">{{errorMessage}}</p>
     {{/if}}
   </form>
-</div>
+  <button id="button-signup2"><a href="/">Back</a></button>
+  </br>
+  </br>
+  </br>
+  </br>
+
 <hr>
