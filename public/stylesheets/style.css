@@ -50,12 +50,12 @@ h2 {
   font-family: 'Rubik Glitch', cursive;
 }
 #register{
-  font-family: 'Noto Serif Khojki', serif;
-  color: rgb(255, 255, 255);
+  font-family: ‘Noto Serif Khojki’, serif;
+  color: rgb(128, 183, 183);
 }
 #enjoy{
-  font-family: 'Noto Serif Khojki', serif;
-  color: rgb(255, 255, 255);
+  font-family: ‘Noto Serif Khojki’, serif;
+  color:rgb(128, 183, 183);
 }
 
 
@@ -213,27 +213,31 @@ justify-content: center;
   position: fixed;
   top: 0;
   }
+  .home {
+    padding-left: 50px;
+    padding-right: 15px;
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(128, 183, 183);
+  }
+  .mytrainings {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(128, 183, 183);
+  }
+  .logout {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(128, 183, 183);
+  }
 
-.home {
-  padding-left: 50px;
-  padding-right: 15px;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-.mytrainings {
-  padding-left: 15px;
-  padding-right: 15px;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-.logout {
-  padding-left: 15px;
-  padding-right: 15px;
-  text-decoration: none;
-  font-size: 16px;
-}
+  .labelTracker {
+    color: #0A0A0B;
+  }
 
 .profile-show {
 
@@ -379,4 +383,18 @@ justify-content: center;
 
   margin: 0 30px;
 
+}
+
+.view-trainings-button {
+  border-radius: 30px;
+  display: block;
+  background-color: rgb(14, 14, 14);
+  padding: 30px;
+  font-size: 25px;
+  cursor: pointer;
+  border: 0;
+}
+#button-link{
+  color: rgb(239, 245, 245);
+  font-family: ‘Noto Serif Khojki’, serif;
 }
