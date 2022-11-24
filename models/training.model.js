@@ -8,11 +8,11 @@ const trainingSchema = new Schema(
       required: [true, "Please add how many date per week you are going to train."],
     },
     distance: {
-        type: Number,
+        type: String,
         required: true,
       },
     time: {
-        type: Number,
+        type: String,
         required: true,
       },
 
