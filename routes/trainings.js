@@ -18,13 +18,28 @@ router.post("/trainings/create", (req, res) => {
         pace,
         user: userID,
     })
-        .then(createdtraining => {
-            console.log("training created")
-            res.redirect("/trainings")
-        })
-        .catch(err => {
-            res.render("trainings/new-training", {errorMessage: "Wrong credentials.", user : req.session.currentUser })
-        })
+    
+    
+    
+    
+    
+    .then(createdtraining => {
+        console.log("training created")
+        res.redirect("/trainings")
+        
+    })
+    .catch(err => {
+        
+                if (distance === "" || time === "" || pace === "") {
+                    res.status(400).render("trainings/new-training", {
+                      errorMessage:
+                        "All fields are mandatory.",
+                    });
+                
+                    return;
+                  }
+        res.render("trainings/new-training", {errorMessage: "Wrong credentials.", user : req.session.currentUser })
+    })
 })
 // Get trainings
 router.get("/trainings", (req, res) => {
