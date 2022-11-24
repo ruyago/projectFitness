@@ -23,7 +23,7 @@ router.post("/trainings/create", (req, res) => {
             res.redirect("/trainings")
         })
         .catch(err => {
-            res.render("trainings/new-training", {errorMessage: "Wrong credentials." })
+            res.render("trainings/new-training", {errorMessage: "Wrong credentials.", user : req.session.currentUser })
         })
 })
 // Get trainings

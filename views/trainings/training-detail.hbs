@@ -1,15 +1,13 @@
-
-
-    <h1 id="detail-title">Training detail</h1>
 <div class="container-detail">
+    <h1 id="detail-title">Training detail</h1>
         <div><b>Date:</b> {{newTraining.date}}</div>
         <div><b>Distance:</b> {{newTraining.distance}} km</div>
         <div><b>Time:</b> {{newTraining.time}} min</div>
         <div><b>Pace:</b> {{newTraining.pace}} min/km</div>
         <div class="button-details">
-        <div><button class="detail"><a href="/trainings/{{newTraining._id}}/edit">Edit {{newTraining.edit}}</a></button></div>
+        <div><a class="edit-delete" href="/trainings/{{newTraining._id}}/edit">Edit {{newTraining.edit}}</a></div>
         <form action="/trainings/{{newTraining._id}}/delete" method="POST">
-           <div><button type="submit" class="detail">Delete {{newTraining.delete}}</button></div>
+           <div><button type="submit" class="delete-card">Delete {{newTraining.delete}}</button></div>
         </form>
-    <div><button class="detail"><a href="/trainings">Trainings</a></button></div>
+    <div><a class="edit-delete" href="/trainings">Trainings</a></div>
 </div>
