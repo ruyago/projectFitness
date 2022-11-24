@@ -3,18 +3,18 @@
 
 
 <div class="container">
-    <h1>Edit {{training.exercise}}</h1>
+    <h1>Edit {{training.exercise}}</h1></br></br>
     <form action="/trainings/{{training._id}}/edit" class="exercises" method="POST">
     <div class="form-wrapper">
                     <div class="tracker-inputs">
-        <div><label for="date" class="labelTracker">Date: </label>
+        <div><label for="date" class="labelTracker">Date: </label></br>
         <input type="date" name="date" id="date" value="{{date2}}"></div>
-        <div><label for="distance" class="labelTracker">Distance: </label>
+        <div><label for="distance" class="labelTracker">Distance: </label></br>
         <input type="text" name="distance" id="distance" value="{{training.distance}}"></div>
-        <div><label for="time" class="labelTracker">Time: </label>
+        <div><label for="time" class="labelTracker">Time: </label></br>
         <input type="text" name="time" id="time" value="{{training.time}}"></div>
-        <div><label for="pace" class="labelTracker">Pace: </label>
+        <div><label for="pace" class="labelTracker">Pace: </label></br>
         <input type="text" name="pace" id="pace" value="{{training.pace}}"></div>
-        <div class="save"><button type="submit" class="save-button"> <b> Save </b></button></div>
+        <div class="save"><button type="submit" class="save-button"> <b> Save </b></button></div></br>
     </form>
 </div></div></div></div>
