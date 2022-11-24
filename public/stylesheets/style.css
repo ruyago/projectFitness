@@ -38,7 +38,7 @@ h2 {
   font-family: 'Noto Serif Khojki', serif;
 
   color: rgb(217, 228, 228);
-  align-items: ;
+  align-items: center;
 
 }
 
@@ -242,6 +242,7 @@ justify-content: center;
   justify-content: center;
   align-items: center;
   font-size: 34px;
+}
 
 .profile-show {
 
