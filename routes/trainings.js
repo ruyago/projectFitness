@@ -35,6 +35,9 @@ router.post("/trainings/create", (req, res) => {
 })
 // Get trainings
 router.get("/trainings", (req, res) => {
+
+
+
     training.find()
 
         .then(trainings => {
@@ -45,7 +48,9 @@ router.get("/trainings", (req, res) => {
             console.log(err)
         })
 
+
 })
+
 // Get training details
 router.get("/trainings/:id", (req, res) => {
     const id = req.params.id
@@ -92,7 +97,8 @@ router.post("/trainings/:id/edit", (req, res) => {
         date,
         distance,
         time,
-        pace
+        pace,
+        
     }
     // const newTraining = { ...trainingData, date: format(new Date(trainingData.date), 'dd/MM/yyyy') }
     training.findByIdAndUpdate(
